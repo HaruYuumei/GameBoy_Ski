@@ -1,0 +1,30 @@
+GAME_STATE= [
+    'MENU',
+    'GAME',
+    'OPTIONS',
+    'EXIT'
+]
+
+# GAME PALLETE GAME-BOY LIKE
+COLOR_GREEN_ONE = (155,188,15)
+COLOR_GREEN_TWO = (139,172,15)
+COLOR_GREEN_THREE = (48,98,48)
+COLOR_GREEN_FOUR = (15,56,15)
+COLOR_BLACK = (0,0,0)
+
+
+
+WIDTH,HEIGHT = 800,600
+
+#Player
+PLAYER_SPEED = 4
+
+#Entity
+ENTITY_SPEED = {
+    'tile0': 0.1,
+    'tile1': 0.2,
+    'tile2': 0.4,
+}
+
+#Sprites
+SPRITE_SIZE = 128
