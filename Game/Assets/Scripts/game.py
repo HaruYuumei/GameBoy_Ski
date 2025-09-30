@@ -13,6 +13,7 @@ class Game:
 
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH,HEIGHT))
+        clock = pygame.time.Clock()
         pygame.display.set_caption("Game Boy Ski!")
         self.game_state = GAME_STATE[0]
 

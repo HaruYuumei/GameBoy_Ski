@@ -18,13 +18,18 @@ WIDTH,HEIGHT = 800,600
 
 #Player
 PLAYER_SPEED = 4
-
+PLAYER_SIDE_SPEED = 6
 #Entity
 ENTITY_SPEED = {
-    'tile0': 0.1,
-    'tile1': 0.2,
-    'tile2': 0.4,
+    'game_background_start' : 1,
+    'game_background0' : 4,
+    'tree' : 4,
+    'tree2' : 4
 }
+ENTITY_BOOST = 1.75
 
 #Sprites
 SPRITE_SIZE = 128
+
+#Background
+BACKGROUND_SIZE = (800,600)
