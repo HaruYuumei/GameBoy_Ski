@@ -8,7 +8,7 @@ class Menu:
     def __init__(self, screen):
         print('Game Menu Starting...')
         self.screen = screen
-        self.background = pygame.image.load('../Images/menu_background.png')
+        self.background = pygame.image.load('../Images/game_background_start.png')
         self.background_rect = self.background.get_frect(center=(WIDTH/2,HEIGHT/2))
 
     def run(self):
