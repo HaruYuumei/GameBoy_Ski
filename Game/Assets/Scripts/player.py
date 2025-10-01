@@ -7,6 +7,7 @@ from Game.Assets.Scripts.entity import Entity
 class Player(Entity):
     def __init__(self, name, position):
         Entity.__init__(self, name, position)
+        self.health = 5
 
     #movement for character
     def move(self, key):
@@ -22,3 +23,6 @@ class Player(Entity):
 
     def getspriterect(self):
         return self.sprite_rect
+
+    def hit_damage(self):
+        self.health = self.health - 1

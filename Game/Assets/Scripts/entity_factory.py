@@ -1,6 +1,7 @@
 from Game.Assets.Scripts.background import Background
 from Game.Assets.Scripts.entity import Entity
 from Game.Assets.Scripts.tree import Tree
+from Game.Assets.Scripts.flag import Flag
 
 
 class Entity_Factory(Entity):
@@ -20,4 +21,7 @@ class Entity_Factory(Entity):
             case 'game_background0':
                 local_background = Background(entity_type, entity_position)
                 return local_background
+            case 'flag':
+                local_flag = Flag(entity_type, entity_position)
+                return local_flag
         return None

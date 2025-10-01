@@ -12,6 +12,7 @@ COLOR_GREEN_THREE = (48,98,48)
 COLOR_GREEN_FOUR = (15,56,15)
 COLOR_BLACK = (0,0,0)
 
+HUD_HEIGHT = 15
 
 
 WIDTH,HEIGHT = 800,600
@@ -24,7 +25,8 @@ ENTITY_SPEED = {
     'game_background_start' : 1,
     'game_background0' : 4,
     'tree' : 4,
-    'tree2' : 4
+    'tree2' : 4,
+    'flag': 4
 }
 ENTITY_BOOST = 1.75
 

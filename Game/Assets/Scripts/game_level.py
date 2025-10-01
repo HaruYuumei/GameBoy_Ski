@@ -1,11 +1,12 @@
 import random
 
 import pygame
+from pygame import Font, Surface, Rect
 
 from Game.Assets.Scripts.entity_factory import Entity_Factory
-from Game.Assets.Scripts.const import WIDTH, HEIGHT, PLAYER_SPEED
+from Game.Assets.Scripts.const import *
 from Game.Assets.Scripts.player import Player
-from Game.Assets.Scripts.tree import Tree
+
 
 
 class GameLevel:
@@ -22,10 +23,10 @@ class GameLevel:
         # Flags
 
         self.tree_list = []
-        for i in range(10):
+        for i in range(8):
             self.tree_list.append(Entity_Factory.getentity('tree',(random.randint(16,WIDTH-16),random.randint(-600,-8))))
 
-        for i in range(10):
+        for i in range(6):
             self.tree_list.append(
                 Entity_Factory.getentity('tree2', (random.randint(16, WIDTH - 16), random.randint(-600, -8))))
 
@@ -33,6 +34,10 @@ class GameLevel:
             Entity_Factory.getentity('game_background0',(WIDTH / 2, -HEIGHT / 2)),
             Entity_Factory.getentity('game_background0', (WIDTH / 2, -900))
         ]
+
+        self.flags= []
+        for i in range(2):
+            self.flags.append(Entity_Factory.getentity('flag', (WIDTH/2,601)))
 
 
         self.clock = pygame.time.Clock()
@@ -44,11 +49,12 @@ class GameLevel:
         boost = 1
         while True:
 
+
             if boost > 1:
                 self.distance += 0.1
             else:
                 self.distance += 0.1 * boost / 10
-            #print(f'Distance: {self.distance}')
+
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -85,6 +91,23 @@ class GameLevel:
                 self.screen.blit(trees.sprite, trees.sprite_rect)
                 trees.move(boost)
 
+            for flag in self.flags:
+                self.screen.blit(flag.sprite, flag.sprite_rect)
+                flag.move(boost)
+
+
+            # HUD
+            self.text_menu(24, f"Health: {player.health}", COLOR_BLACK, (650, HUD_HEIGHT))
+            self.text_menu(24, f"Distance: {self.distance:.2f} Meters", COLOR_BLACK, (200, HUD_HEIGHT))
+            self.text_menu(24, f"Timer: ", COLOR_BLACK, (150, HUD_HEIGHT + 20))
+
+
             self.screen.blit(player.getsprite(), player.getspriterect())
             pygame.display.flip()
             self.clock.tick(60)
+
+    def text_menu(self,text_size: int,text:str,text_color:tuple,text_center_pos):
+        text_font: Font = pygame.font.SysFont('Lucida Sans Typewriter', size=text_size)
+        text_surface: Surface = text_font.render(text, True, text_color).convert_alpha()
+        text_rect: Rect = text_surface.get_rect(center=text_center_pos)
+        self.screen.blit(text_surface, text_rect)
