@@ -21,7 +21,3 @@ class Flag(Entity):
 
 def set_position(self, position):
     self.position = position
-
-
-def hit(self):
-    self.hit = True

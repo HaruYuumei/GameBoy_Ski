@@ -1,8 +1,6 @@
-import sys
-
-import pygame
-from Game.Assets.Scripts.const import *
 from Game.Assets.Scripts.game_level import GameLevel
+from Game.Assets.Scripts.game_level_end import GameLevelEnd
+
 from Game.Assets.Scripts.menu import *
 
 class Game:
@@ -16,7 +14,7 @@ class Game:
         clock = pygame.time.Clock()
         pygame.display.set_caption("Game Boy Ski!")
         self.game_state = GAME_STATE[0]
-
+        self.player_score = 0
 
     def run(self):
         print('Game running...')
@@ -33,7 +31,9 @@ class Game:
                     self.game_state = menu.run()
                 case 'GAME':
                     # GAME RUNS HERE
-                    level = GameLevel(self.screen,'Level','singleplayer').run()
+                    self.player_score = GameLevel(self.screen,'Level').run()
+                    if self.player_score:
+                        self.player_score = GameLevelEnd(self.screen,'game_level_end').run(self.player_score)
                     pass
                 case 'OPTIONS':
                     # OPTIONS MENU HERE

@@ -1,3 +1,5 @@
+import pygame
+
 GAME_STATE= [
     'MENU',
     'GAME',
@@ -14,6 +16,9 @@ COLOR_BLACK = (0,0,0)
 
 HUD_HEIGHT = 15
 
+TIMEOUT_TIME = pygame.USEREVENT + 1
+TIMEOUT_STEP = 100
+LEVEL_TIME = 15000
 
 WIDTH,HEIGHT = 800,600
 

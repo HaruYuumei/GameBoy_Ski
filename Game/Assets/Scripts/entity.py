@@ -13,6 +13,7 @@ class Entity(ABC):
         self.sprite = pygame.image.load('../Images/'+name+'.png')
         self.sprite_rect = self.sprite.get_frect(center=(position[0],position[1]))
         self.speed = ENTITY_BOOST
+        self.collided = False
 
     @abstractmethod
     def move(self,*args,**kwargs):

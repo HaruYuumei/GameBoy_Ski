@@ -6,8 +6,5 @@ game = Game()
 ## COLISAO COM OBJETOS
 ## TEMPORIZADOR
 
-#
-
-
 game.run()
 quit()
