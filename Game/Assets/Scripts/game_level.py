@@ -7,6 +7,10 @@ from Game.Assets.Scripts.const import *
 from Game.Assets.Scripts.player import Player
 
 
+## Does being a girl or a boy matter when you really like something?
+## - Kitagawa Marin  - Sono Bisque Doll Wa Koi Wo Suru
+
+
 class GameLevel:
     def __init__(self, screen, name):
         self.screen = screen

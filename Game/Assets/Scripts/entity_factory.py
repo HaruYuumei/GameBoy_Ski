@@ -4,6 +4,14 @@ from Game.Assets.Scripts.tree import Tree
 from Game.Assets.Scripts.flag import Flag
 
 
+#
+#   "Treasure the experience.
+#   Dreams fade away after you wake up."
+#
+#   -Hitoha Miyamizu - Kimi no na wa
+#
+
+
 class Entity_Factory(Entity):
 
     def move(self, *args, **kwargs):

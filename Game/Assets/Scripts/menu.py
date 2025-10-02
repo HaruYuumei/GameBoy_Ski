@@ -35,11 +35,11 @@ class Menu:
                     if event.key == pygame.K_w or event.key == pygame.K_UP:
                         menu_option -= 1
                         if menu_option <= 0:
-                            menu_option = 3
+                            menu_option = 4
 
                     if event.key == pygame.K_s or event.key == pygame.K_DOWN:
                         menu_option += 1
-                        if menu_option >= 4:
+                        if menu_option >= 5:
                             menu_option = 1
 
                     if event.key == pygame.K_RETURN:

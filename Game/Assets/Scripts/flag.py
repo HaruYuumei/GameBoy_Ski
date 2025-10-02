@@ -1,8 +1,15 @@
 import random
 
-
 from Game.Assets.Scripts.const import ENTITY_SPEED, HEIGHT
 from Game.Assets.Scripts.entity import Entity
+
+
+#
+#   " Does the "me" of ten years in the future
+#   have one less regret now? "
+#
+#    -Takamiya Naho - Orange
+#
 
 
 class Flag(Entity):

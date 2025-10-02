@@ -3,9 +3,17 @@ import pygame
 GAME_STATE= [
     'MENU',
     'GAME',
+    'SCORE',
     'OPTIONS',
     'EXIT'
 ]
+
+SCORE_POSITION = {
+    0:(300,100),
+    1:(300,200),
+    2:(300,300),
+    3:(300,400),
+}
 
 # GAME PALLETE GAME-BOY LIKE
 COLOR_GREEN_ONE = (155,188,15)
