@@ -4,22 +4,32 @@ from pygame import Font, Surface, Rect
 from Game.Assets.Scripts.const import *
 
 
+#
+#   "Everything that lives is designed to end.
+#       We are perpetually trapped, in a never-ending spiral of Life and Death
+#          Is it a curse? or some kind of punishment?
+#               I often think about the God who blessed us with this cryptic puzzle...
+#                   and I wonder if we will have the chance to kill him."
+#
+#       - 2B  - Nier Automata
+
+
 class Menu:
     def __init__(self, screen):
         print('Game Menu Starting...')
         self.screen = screen
         self.background = pygame.image.load('../Images/game_background_start.png')
-        self.background_rect = self.background.get_frect(center=(WIDTH/2,HEIGHT/2))
+        self.background_rect = self.background.get_frect(center=(WIDTH / 2, HEIGHT / 2))
 
     def run(self):
         print('Game Menu running...')
         menu_option = 1
         while True:
-            #drawing
+            # drawing
             self.screen.blit(self.background, self.background_rect)
             self.text_menu(62, "Game Boy Ski!", COLOR_BLACK, (WIDTH / 2, HEIGHT / 8))
 
-            for texts in range(1,len(GAME_STATE)):
+            for texts in range(1, len(GAME_STATE)):
                 if texts == menu_option:
                     self.text_menu(26, GAME_STATE[texts], COLOR_GREEN_THREE, (WIDTH / 2, 200 + 40 * texts))
                 else:
@@ -45,8 +55,7 @@ class Menu:
                     if event.key == pygame.K_RETURN:
                         return GAME_STATE[menu_option]
 
-
-    def text_menu(self,text_size: int,text:str,text_color:tuple,text_center_pos):
+    def text_menu(self, text_size: int, text: str, text_color: tuple, text_center_pos):
         text_font: Font = pygame.font.SysFont('Lucida Sans Typewriter', size=text_size)
         text_surface: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surface.get_rect(center=text_center_pos)

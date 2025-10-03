@@ -1,5 +1,16 @@
 import pygame
 
+
+#
+#   "Meeting you was the best thing that ever happened to me.
+#   You made me so happy. I don’t want you to be lost or afraid or anything like that.
+#   From here on out, I know things might be hard sometimes.
+#   But no matter what may await, please don’t regret meeting me.
+#
+#   - Nagisa Furukawa, Clannad
+#
+
+
 GAME_STATE= [
     'MENU',
     'GAME',
@@ -9,10 +20,9 @@ GAME_STATE= [
 ]
 
 SCORE_POSITION = {
-    0:(300,100),
-    1:(300,200),
-    2:(300,300),
-    3:(300,400),
+    0 : (300,200),
+    1 : (300,250),
+    2 : (300,300),
 }
 
 # GAME PALLETE GAME-BOY LIKE

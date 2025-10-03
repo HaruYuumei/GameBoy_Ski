@@ -3,6 +3,12 @@ import pygame
 from Game.Assets.Scripts.const import PLAYER_SIDE_SPEED, WIDTH
 from Game.Assets.Scripts.entity import Entity
 
+#   " Kita-san Black I hate you, It's because of you that I've come this far,
+#    Because you were there, I made it to today without giving up.
+#    Kita-san Black, The truth is...
+#                    I...I've always...Loved you.
+#
+#   - Cheval Grand - UmaMusume Pretty derby, S3-Ep12
 
 class Player(Entity):
     def __init__(self, name, position):

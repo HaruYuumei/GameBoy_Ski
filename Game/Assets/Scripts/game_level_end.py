@@ -3,15 +3,14 @@ from pygame import *
 from Game.Assets.Scripts.DBProxy import DBProxy
 from Game.Assets.Scripts.const import *
 
+
 #
 #   "After she made that miracle happen, I said to her...
 #   I was sure there was no God.
 #   but if there is one, it must be You."
 #
-#   -Violet Evergarden Ep7:'    ' , 17:36
+#   -Violet Evergarden S1-Ep7, 17:36s
 #
-
-
 
 
 class GameLevelEnd:
@@ -22,6 +21,7 @@ class GameLevelEnd:
         database_proxy.save(player_score)
 
         scores = [row[1] for row in database_proxy.retrieve_top3()]
+
         print(scores)
         while True:
             for event in pygame.event.get():
@@ -36,12 +36,13 @@ class GameLevelEnd:
 
             # HUD
 
-            self.text_menu(24, f"last run Score: {player_score:.2f}!", COLOR_BLACK, (WIDTH/2, 150))
+            self.text_menu(24, f"last run Score: {player_score:.2f}!", COLOR_BLACK, (WIDTH / 2, 150))
 
-            self.text_menu(24, f"#1 Score: {scores[0]:.2f}!", COLOR_BLACK, (WIDTH / 2, 200))
-            self.text_menu(24, f"#2 Score: {scores[1]:.2f}!", COLOR_BLACK, (WIDTH / 2, 250))
-            self.text_menu(24, f"#3 Score: {scores[2]:.2f}!", COLOR_BLACK, (WIDTH / 2, 300))
-            self.text_menu(24, f"Press Enter to return!", COLOR_BLACK, (WIDTH/2, 400))
+            for i, score in enumerate(scores):
+                y_pos = 200 + (i * 50)
+                self.text_menu(24, f"#{i + 1} Score: {score:.2f}!", COLOR_BLACK, (WIDTH / 2, y_pos))
+
+            self.text_menu(24, f"Press Enter to return!", COLOR_BLACK, (WIDTH / 2, 400))
 
             pygame.display.flip()
             self.clock.tick(60)

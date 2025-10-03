@@ -20,6 +20,7 @@ class DBProxy:
                             score INTEGER NOT NULL)''')
 
     def save(self,score:int):
+        self.connection.execute('''INSERT INTO dados (score) VALUES (0)''', {'score': score})
         self.connection.execute("INSERT INTO dados (score) VALUES (:score)",{'score':score})
         self.connection.commit()
 

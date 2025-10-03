@@ -26,7 +26,11 @@ class Game:
         self.player_score = 0
 
     def run(self):
+
         print('Game running...')
+        # Music!
+        pygame.mixer_music.load('../Audio/gameloop_song.wav')
+        pygame.mixer_music.play(-1)
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:

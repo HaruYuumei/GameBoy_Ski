@@ -2,9 +2,9 @@ from Game.Assets.Scripts.const import ENTITY_SPEED, HEIGHT, WIDTH
 from Game.Assets.Scripts.entity import Entity
 
 #
-#   "Its not Yamada's heart that I don't understand. It's my own heart.
+#   "It's not Yamada's heart that I don't understand. It's my own heart.
 #   Even though I really wanted it, I figured I couldn't get it anyway,so...
-#   ... I was just looking for reasons to hate it.
+#   I was just looking for reasons to hate it.
 #   Because letting yourself like something that much is scary..."
 #
 #   - Ichikawa -  The dangers in my heart, Karte 43
