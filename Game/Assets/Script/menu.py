@@ -1,7 +1,6 @@
-import pygame
-from pygame import Font, Surface, Rect
+from pygame import *
 
-from Game.Assets.Scripts.const import *
+from Game.Assets.Script.const import *
 
 
 #

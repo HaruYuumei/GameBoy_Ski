@@ -1,7 +1,7 @@
-from Game.Assets.Scripts.game_level import GameLevel
-from Game.Assets.Scripts.game_level_end import GameLevelEnd
+from Game.Assets.Script.game_level import GameLevel
+from Game.Assets.Script.game_level_end import GameLevelEnd
 
-from Game.Assets.Scripts.menu import *
+from Game.Assets.Script.menu import *
 
 
 ##

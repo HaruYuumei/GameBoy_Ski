@@ -1,7 +1,7 @@
-from Game.Assets.Scripts.background import Background
-from Game.Assets.Scripts.entity import Entity
-from Game.Assets.Scripts.tree import Tree
-from Game.Assets.Scripts.flag import Flag
+from Game.Assets.Script.background import Background
+from Game.Assets.Script.entity import Entity
+from Game.Assets.Script.tree import Tree
+from Game.Assets.Script.flag import Flag
 
 
 #

@@ -2,9 +2,9 @@ import random
 
 from pygame import *
 
-from Game.Assets.Scripts.entity_factory import Entity_Factory
-from Game.Assets.Scripts.const import *
-from Game.Assets.Scripts.player import Player
+from Game.Assets.Script.entity_factory import Entity_Factory
+from Game.Assets.Script.const import *
+from Game.Assets.Script.player import Player
 
 
 # Does being a girl or a boy matter when you really like something?

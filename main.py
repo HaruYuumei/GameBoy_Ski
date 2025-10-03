@@ -1,4 +1,4 @@
-from Game.Assets.Scripts.game import Game
+from Game.Assets.Script.game import Game
 
 #
 #       " Hey Nana...

@@ -1,5 +1,5 @@
-from Game.Assets.Scripts.const import ENTITY_SPEED, HEIGHT, WIDTH
-from Game.Assets.Scripts.entity import Entity
+from Game.Assets.Script.const import ENTITY_SPEED, HEIGHT, WIDTH
+from Game.Assets.Script.entity import Entity
 
 #
 #   "It's not Yamada's heart that I don't understand. It's my own heart.

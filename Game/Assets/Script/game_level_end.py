@@ -1,7 +1,7 @@
 from pygame import *
 
-from Game.Assets.Scripts.DBProxy import DBProxy
-from Game.Assets.Scripts.const import *
+from Game.Assets.Script.DBProxy import DBProxy
+from Game.Assets.Script.const import *
 
 
 #

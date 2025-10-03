@@ -1,7 +1,7 @@
 import random
 
-from Game.Assets.Scripts.const import ENTITY_SPEED, HEIGHT
-from Game.Assets.Scripts.entity import Entity
+from Game.Assets.Script.const import ENTITY_SPEED, HEIGHT
+from Game.Assets.Script.entity import Entity
 
 
 #

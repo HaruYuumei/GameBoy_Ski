@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 import pygame
 
-from Game.Assets.Scripts.const import ENTITY_BOOST
+from Game.Assets.Script.const import ENTITY_BOOST
 
 
 #
