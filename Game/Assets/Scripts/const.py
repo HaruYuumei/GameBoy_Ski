@@ -15,7 +15,6 @@ GAME_STATE= [
     'MENU',
     'GAME',
     'SCORE',
-    'OPTIONS',
     'EXIT'
 ]
 

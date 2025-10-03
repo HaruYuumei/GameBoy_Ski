@@ -29,7 +29,7 @@ class Game:
 
         print('Game running...')
         # Music!
-        pygame.mixer_music.load('../Audio/gameloop_song.wav')
+        pygame.mixer_music.load('Game/Assets/Audio/gameloop_song.wav')
         pygame.mixer_music.play(-1)
         while True:
             for event in pygame.event.get():
@@ -48,9 +48,6 @@ class Game:
                     self.game_state = 'SCORE'
                 case 'SCORE':
                     self.game_state = GameLevelEnd(self.screen, 'game_level_end').run(self.player_score)
-                case 'OPTIONS':
-                    # OPTIONS MENU HERE
-                    pass
                 case 'EXIT':
                     # QUIT HERE
                     pygame.quit()

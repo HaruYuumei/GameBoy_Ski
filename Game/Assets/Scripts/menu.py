@@ -18,7 +18,7 @@ class Menu:
     def __init__(self, screen):
         print('Game Menu Starting...')
         self.screen = screen
-        self.background = pygame.image.load('../Images/game_background_start.png')
+        self.background = pygame.image.load('Game/Assets/Images/game_background_start.png')
         self.background_rect = self.background.get_frect(center=(WIDTH / 2, HEIGHT / 2))
 
     def run(self):
@@ -45,11 +45,11 @@ class Menu:
                     if event.key == pygame.K_w or event.key == pygame.K_UP:
                         menu_option -= 1
                         if menu_option <= 0:
-                            menu_option = 4
+                            menu_option = 3
 
                     if event.key == pygame.K_s or event.key == pygame.K_DOWN:
                         menu_option += 1
-                        if menu_option >= 5:
+                        if menu_option >= 4:
                             menu_option = 1
 
                     if event.key == pygame.K_RETURN:

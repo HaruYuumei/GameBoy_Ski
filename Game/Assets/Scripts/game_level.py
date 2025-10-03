@@ -21,7 +21,7 @@ class GameLevel:
         pygame.time.set_timer(TIMEOUT_TIME, TIMEOUT_STEP)  # 100ms
 
         # Level Backgrounds
-        self.background = pygame.image.load('../Images/game_background_start.png')
+        self.background = pygame.image.load('Game/Assets/Images/game_background_start.png')
         self.background_rect = self.background.get_frect(center=(WIDTH / 2, HEIGHT / 2))
 
         # Flags

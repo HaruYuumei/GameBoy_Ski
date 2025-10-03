@@ -18,7 +18,7 @@ class Entity(ABC):
         self.name = name
         self.position = position
 
-        self.sprite = pygame.image.load('../Images/' + name + '.png')
+        self.sprite = pygame.image.load('Game/Assets/Images/' + name + '.png')
         self.sprite_rect = self.sprite.get_frect(center=(position[0], position[1]))
         self.speed = ENTITY_BOOST
         self.collided = False
